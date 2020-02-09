@@ -26,10 +26,10 @@ export class CscoComponent {
     let myChart = new Chart(this.ctx, {
       type: 'line',
       data: {
-          labels: ["New", "In Progress", "On Hold"],
+          labels: ['30-01-2020', '31-01-2020', '01-02-2020', '02-02-2020', '03-02-2020', '04-02-2020'],
           datasets: [{
-              label: '# of Votes',
-              data: [1,20,8],
+              label: 'CSCO Stocks',
+              data: [47.24,45.97,46.53,47.62,48.45,48.69],
               backgroundColor: [
                   'rgba(255, 99, 132, 1)',
                   'rgba(54, 162, 235, 1)',
