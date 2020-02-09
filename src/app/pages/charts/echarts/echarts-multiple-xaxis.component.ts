@@ -79,7 +79,7 @@ export class EchartsMultipleXaxisComponent implements AfterViewInit, OnDestroy {
               '2016-11',
               '2016-12',
             ],
-          },
+          }, 
           {
             type: 'category',
             axisTick: {

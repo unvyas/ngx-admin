@@ -11,12 +11,15 @@
           <button nbButton fullWidth (click)="goToHome()" type="button" class="home-button">
             Take me home
           </button>
+
+          <nb-card>
+            <nb-card-header>Stock Values</nb-card-header>
+            <nb-card-body>
+              <ngx-echarts-multiple-xaxis></ngx-echarts-multiple-xaxis>
+            </nb-card-body>
+          </nb-card>
 -->
- 
-<script>
-
-</script>
-
+<canvas id ="cs" width="700" height="600"></canvas>
           
         </div>
       </nb-card-body>

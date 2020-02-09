@@ -10,7 +10,7 @@ const routes: Routes = [
     component: MiscellaneousComponent,
     children: [
       {
-        path: '404',
+        path: '/',
         component: NotFoundComponent,
       },
     ],

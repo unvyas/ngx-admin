@@ -1,0 +1,30 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  
+  ngx-echarts-multiple-xaxis{
+    display: block;
+    height: nb-theme(card-height-medium);
+    width: 100%;
+  }
+}
+.flex-centered {
+  margin: auto;
+}
+nb-card-body {
+  display: flex;
+}
+
+.title {
+  text-align: center;
+}
+
+.sub-title {
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.home-button {
+  margin-bottom: 2rem;
+}

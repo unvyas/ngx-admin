@@ -221,7 +221,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/miscellaneous/404',
       },
     ],
-  }, */
+  },
+  */
+   
   {
     title: 'Auth',
     icon: 'lock-outline',
@@ -244,4 +246,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
   },
+
+  {
+    title: 'Stock',
+    icon: 'shuffle-2-outline',
+    children: [
+      {
+        title: 'CSCO',
+        link: '/pages/stock/csco',
+      },
+    ],
+  },
+
 ];
