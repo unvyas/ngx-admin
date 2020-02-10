@@ -11,6 +11,7 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ApiService } from './api.service';
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -20,6 +21,7 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -42,7 +44,8 @@ import {
     }),
     CoreModule.forRoot(),
   ],
-  bootstrap: [AppComponent],
+  providers: [ApiService],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
