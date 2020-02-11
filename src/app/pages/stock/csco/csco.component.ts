@@ -11,7 +11,9 @@ import { ApiService } from '../../../api.service.js';
 })
 export class CscoComponent {
 
+
   constructor(private menuService: NbMenuService,private apiService : ApiService) {
+
   }
 /*
   goToHome() {
@@ -47,12 +49,19 @@ export class CscoComponent {
         display:true
       }
     });
+
     this.apiService.getApiCall("http://localhost:9200/api/stock/csco")
     .subscribe((data)=>{
       myChart.data.labels = data['labels']
       myChart.data.datasets[0].data = data['data']
       myChart.update()
     });
+
+    
+
   }
 
 }
+
+
+
