@@ -9,4 +9,5 @@ app.get("/api/stock/csco", (req, res, next) => {       //get requests to the url
             data: [47.24,45.97,46.53,47.62,48.45,48.69]
         }
     )
+    console.log("request received")
 })

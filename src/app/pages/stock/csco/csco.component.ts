@@ -1,6 +1,7 @@
 import { NbMenuService } from '@nebular/theme';
 import { Component } from '@angular/core';
 import * as Chart from '../../../../../node_modules/chart.js'
+import { ApiService } from '../../../api.service.js';
 //import * as Chart from 'chart.js'
 
 @Component({
@@ -10,7 +11,7 @@ import * as Chart from '../../../../../node_modules/chart.js'
 })
 export class CscoComponent {
 
-  constructor(private menuService: NbMenuService) {
+  constructor(private menuService: NbMenuService,private apiService : ApiService) {
   }
 /*
   goToHome() {
@@ -20,16 +21,19 @@ export class CscoComponent {
   title = 'angular8chartjs';
   canvas: any;
   ctx: any;
+  canvas2 :any 
+  ctx2 :any
   ngAfterViewInit() {
     this.canvas = document.getElementById('cs');
     this.ctx = this.canvas.getContext('2d');
+
     let myChart = new Chart(this.ctx, {
       type: 'line',
       data: {
-          labels: ['30-01-2020', '31-01-2020', '01-02-2020', '02-02-2020', '03-02-2020', '04-02-2020'],
+          labels: [],
           datasets: [{
               label: 'CSCO Stocks',
-              data: [47.24,45.97,46.53,47.62,48.45,48.69],
+              data: [],
               backgroundColor: [
                   'rgba(255, 99, 132, 1)',
                   'rgba(54, 162, 235, 1)',
@@ -42,6 +46,12 @@ export class CscoComponent {
         responsive: false,
         display:true
       }
+    });
+    this.apiService.getApiCall("http://localhost:9200/api/stock/csco")
+    .subscribe((data)=>{
+      myChart.data.labels = data['labels']
+      myChart.data.datasets[0].data = data['data']
+      myChart.update()
     });
   }
 

@@ -20,6 +20,7 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { ApiService } from './api.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -42,6 +43,7 @@ import {
     }),
     CoreModule.forRoot(),
   ],
+  providers: [ApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {
