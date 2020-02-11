@@ -28,3 +28,14 @@ nb-card-body {
 .home-button {
   margin-bottom: 2rem;
 }
+
+.column {
+  float:left;
+  width:33.33%
+}
+
+.row:after{
+  content: "";
+  display : table;
+  clear : both;
+}
